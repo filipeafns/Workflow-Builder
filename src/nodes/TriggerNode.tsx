@@ -7,12 +7,8 @@ export type PositionTriggerNodeData = {
 };
 
 export function PositionTriggerNode({
-  xPos,
-  yPos,
   data,
 }: NodeProps<PositionTriggerNodeData>) {
-  const x = `${Math.round(xPos)}px`;
-  const y = `${Math.round(yPos)}px`;
 
   return (
     // We add this class to use the same styles as React Flow's default nodes.

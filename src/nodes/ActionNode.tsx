@@ -7,12 +7,8 @@ export type PositionActionNodeData = {
 };
 
 export function PositionActionNode({
-  xPos,
-  yPos,
   data,
 }: NodeProps<PositionActionNodeData>) {
-  const x = `${Math.round(xPos)}px`;
-  const y = `${Math.round(yPos)}px`;
 
   return (
     // We add this class to use the same styles as React Flow's default nodes.
