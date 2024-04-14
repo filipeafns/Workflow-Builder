@@ -1,23 +1,51 @@
 import type { Node, NodeTypes } from "reactflow";
 import { PositionLoggerNode } from "./PositionLoggerNode";
+import { PositionTriggerNode } from "./TriggerNode";
+import { PositionActionNode } from "./ActionNode";
 
 export const initialNodes = [
-  { id: "a", type: "input", position: { x: 0, y: 0 }, data: { label: "Trigger" } },
+  {
+    id: "a",
+    position: { x: 100, y: 0 },
+    data: { 
+      label: "Shopify",
+      description: "A new user is created"
+    },
+    type: "trigger",
+  },
   {
     id: "b",
     position: { x: 0, y: 100 },
-    data: { label: "NetSuite" },
+    data: { 
+      label: "Shopify",
+      description: "Add user to campaign"
+    },
+    type: "position-logger",
   },
-  { id: "c", position: { x: 200, y: 100 }, data: { label: "Iterate" } },
+  {
+    id: "c",
+    position: { x: 200, y: 100 },
+    data: { 
+      label: "Mailchimp",
+      description: "Send welcome email"
+    },
+    type: "action",
+  },
   {
     id: "d",
-    type: "output",
+    type: "action",
     position: { x: 0, y: 200 },
-    data: { label: "Snowflake" },
+    data: { 
+      label: "Mailchimp",
+      description: "Send discount campaign",
+    },
   },
+  
 ] satisfies Node[];
 
 export const nodeTypes = {
   "position-logger": PositionLoggerNode,
+  "trigger":PositionTriggerNode,
+  "action":PositionActionNode,
   // Add any of your custom nodes here!
 } satisfies NodeTypes;

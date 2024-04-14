@@ -35,8 +35,15 @@ export default function App() {
       onConnect={onConnect}
       fitView
     >
-      <Background />
-      <MiniMap />
+      <Background
+        gap={5}
+        size={0.5}
+      />
+      <MiniMap
+        className="!bg-background"
+        zoomable
+        pannable
+      />
       <Controls />
     </ReactFlow>
   );
