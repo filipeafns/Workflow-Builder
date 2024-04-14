@@ -17,6 +17,7 @@ export function PositionTriggerNode({
   return (
     // We add this class to use the same styles as React Flow's default nodes.
     <div className="integration-card">
+      <span className="trigger">Trigger</span>
       <div className="app-icon">
         <img src="shopify.svg" alt="" />
       </div>

@@ -49,8 +49,9 @@ table {
     border-spacing: 0;
 }
 
-
-
+h2 { font-size: 28px; }
+h3 { font-size: 20px; }
+h4 { font-size: 16px; }
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -119,15 +120,6 @@ button:hover {
 
 .react-flow { background-color: rgba(255, 255, 255, 98%); }
 
-.configure {
-  width: 500px;
-  height: 100%;
-  border-left: 1px solid #c2c2c2;
-  background-color: white;
-  padding: 32px;
-  height: 100%;
-}
-
 .react-flow__node-input, .react-flow__node-default, .react-flow__node-output {
   text-align: left;
   font-size: 14px;
@@ -194,4 +186,110 @@ p { margin: 0; }
 
 .card-description { 
   font-size: 12px;
+}
+
+.trigger {
+  display: block;
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: green;
+  color: white;
+  border-radius: 50px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+}
+
+.configure {
+  position: relative;
+  width: 600px;
+  height: 100%;
+  border-left: 1px solid #c2c2c2;
+  background-color: white;
+}
+
+.configure-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.toggle {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.default, .active {
+  width: 100%;
+  text-align: center;
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.tab-count {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c2c2c2;
+  border: 1px solid #f1f1f1;
+  margin-right: 8px;
+}
+
+.active .tab-count {
+  background-color: green;
+  color: white;
+}
+
+.active {
+  border-bottom: 1px solid green;
+}
+
+.trigger-name {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 8px;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.trigger-name label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.trigger-name input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  padding: 4px 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  outline-color: green;
+}
+
+.trigger-list {
+  display: flex;
+  height: 100%;
+  padding: 24px;
+  overflow-x: scroll;
+  flex-direction: column;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
 }
