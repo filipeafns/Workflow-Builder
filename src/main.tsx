@@ -47,7 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <div className='configure'>
           <div className='configure-header'>
             <h2>Shopify Trigger</h2>
-            <img src="shopify.svg" alt="" />
+            <img src="shopify-big.svg" alt="" />
           </div>
           <div className='toggle'>
             <span className='active'>
@@ -66,13 +66,16 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <ul className='trigger-list'>
             <h3>Select a Trigger Event</h3>
             <ul>
-              <h4>Recommended</h4>
+              <div className='trigger-category'>
+                <img src="star.svg" alt="" />
+                <h4>Recommended</h4>  
+              </div>
               <li className='event-card'>
-                <h5>Cart abandoned</h5>
+                <h5>User created</h5>
                 <p>Lorem ipsum sit dolor amet avec sans nitum lorem gard app</p>
               </li>
               <li className='event-card'>
-                <h5>Cart abandoned</h5>
+                <h5>New Order</h5>
                 <p>Lorem ipsum sit dolor amet avec sans nitum lorem gard app</p>
               </li>
               <li className='event-card'>
